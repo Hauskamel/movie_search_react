@@ -4,8 +4,8 @@ import SearchBar from "./components/SearchBar.jsx";
 import './assets/app.css';
 
 function App() {
-    function handleInput () {
-
+    function handleInput (input) {
+        console.log(input)
     }
 
     return (

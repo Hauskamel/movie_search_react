@@ -1,17 +1,18 @@
 import {useState} from "react";
 
-function SearchBar() {
-    const [userInput, setUserInput] = useState("");
+// eslint-disable-next-line react/prop-types
+function SearchBar({input}) {
 
     function handleChange(e) {
-        // if data is backspace, enter
-        if (e.nativeEvent.data == null) return;
-
-        setUserInput(userInput + e.nativeEvent.data);
+        const value = e.target.value;
+        input(value);
     }
 
     return (
-        <input onChange={handleChange}></input>
+        <input
+            type="text"
+            onChange={handleChange}
+        ></input>
     )
 }
 
